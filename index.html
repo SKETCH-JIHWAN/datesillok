@@ -38,15 +38,52 @@
 			-->
 
 			<ul class="years">
-				<li>2020년</li>
-				<li>2021년</li>
+				<li class="active y-2020">2020년</li>
+				<li class="y-2021">2021년</li>
 			</ul>
-			<div class="sillok-list">
-				<div class="sillok-date 2020">
-					<h2 class="tit"></h2>
+			<div class="sillok-list y-2020">
+				<div class="sillok-items">
+					<h2 class="days">
+						<span class="dates">2020.11.07</span>
+						<span class="tit">잠실에서 덕소, 덕소에서 잠실까지</span>
+					</h2>
+					<p class="contents">
+						친구들과 놀고 있는 윤진이를 데리고 오기 위해서 차를 몰고 덕소를 향해 출발했다. <br>
+						주말의 잠실 운전은 처음이라 다소 긴장이 되었다. <br>
+						처음엔 긴장감이 극에 달해서 심장이 두근거렸지만 이내 안정감을 갖추면서 목적지를 향해 갈 수 있었다. <br>
+						윤진이가 친구들과 모여 있는 곳에 갔더니 강아지가 있었다. 아무리 봐도 말이 통하지 않는 위협을 줄 수 있는 생명체들은 무섭다. <br>
+						의사소통이 가능한 사람끼리도 다툼이 일어나고 한 가지 말에 의사소통이 안되는데 의사소통이 되지 않는 생명체를 믿는다는 건 더욱 어려운 거 같다. <br>
+						사실 의사소통이 되는 사람이 무서울 때도 많다. <br>
+						윤진이 친구들이 음식을 권했지만 난 배가 정말 부르면 젓가락도 아예 내려놓고 새로운 음식이 나와도 맛도 보지 않는 성격이라, 이 역시 거절했다. <br>
+						하지만 윤진이의 계속된 권유로 너무나도 배가 불렀지만 어묵탕 국물이라도 마셨다. <br>
+						그리고 차를 타고 다시 잠실로 오는 길에 윤진이에게 혼이 났다. <br>
+						윤진이의 의견을 듣고 난 후, 이렇게 서로에게 불편한 감정을 느끼게 한다면
+						애초에 그런 일이 생기지 않게끔 해야겠단 생각이 들었다. <br>
+						난 평소에도 주변 사람들이 무엇을 해도 내가 관심이 없다면 그냥 시큰둥했다. <br>
+						처음엔 그게 예의가 아니라고 생각해서 관심 있는 척, 챙기는 척 하였다. 하지만 영혼이 담기지 않은 나의 모습이 이내 보여졌고 그로인해 오히려 더 불편해지는 상황이 오게 되었다. <br>
+						그래서 그 이후, 말도 아끼게 되면서 먼저 다가가지 않는다. <br>
+						무튼, 난 사람 대하는게 정말 어려운 거 같다. 나이를 먹으면 먹을수록 사람 관리가 힘들어지는 기분이다. <br>
+						무사히 잠실에 도착 후, 주차를 하다가 그만 사이드 미러를 박살내버렸다. <br>
+						그냥 다 망했다는 생각뿐이었다. 그냥 모든게 부정적이게 생각되었다. <br>
+						그냥 다 모르겠다. 죄다 부정하고 싶고 싫었다. 세상은 역시 내 생각대로 안되고 원하는데로 흘러가지 않는다.
+					</p>
 				</div>
 			</div>
 		</div>
 	<script src="date.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script>
+		$(".years li").click(function(){
+			$(".years li").removeClass("active");
+			$(this).addClass("active");
+			if($(this).hasClass("y-2020") == true){
+				$(".sillok-list").css("display", "none");
+				$(".sillok-list.y-2020").css("display", "block");
+			} else {
+				$(".sillok-list").css("display", "none");
+				$(".sillok-list.y-2021").css("display", "block");
+			}
+		});
+	</script>
 </body>
 </html>

@@ -87,6 +87,15 @@ html, body {
 }
 
 .container .years li {float:left; padding:5px 10px; border:1px solid #222; box-sizing:border-box; margin-left:10px; border-radius:7px; line-height:1rem; vertical-align: middle; transition: .5s; cursor: pointer;}
+.container .years li.active {color:#fff; background:#222}
 .container .years::after {content:""; display: block; clear: both;}
 .container .years li:first-child {margin-left:0}
 .container .years li:hover {background:#222; color:#fff}
+.container .sillok-list {padding:30px 0}
+.container .sillok-list .sillok-items {margin-bottom:20px;}
+.container .sillok-items .days {margin-bottom:10px}
+.container .sillok-items .days::after {content:""; display:block; clear: both;}
+.container .sillok-items .days > span {float:left; margin-right:10px}
+.container .sillok-items .days .dates {font-size:22px; color:#818181}
+.container .sillok-items .days .tit {font-size:16px; height:22px; line-height:24px; vertical-align: text-bottom; font-weight:600}
+.container .sillok-items .contents {line-height:1.5rem}
