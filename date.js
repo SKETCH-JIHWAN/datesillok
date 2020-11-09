@@ -28,8 +28,8 @@ var days = Math.ceil((today-meetday)/24/60/60/1000);
 // days = days - 1;
 document.getElementById("current").innerHTML = days;
 
-alert("비밀번호를 입력해주세요");
-var pw = prompt("비밀번호 입력", "");
+// alert("비밀번호를 입력해주세요");
+var pw = prompt("당신은 누구신가요?", "");
 if (pw == "012486") {
 	alert("윤진아 나도 사랑해😍");
 	document.querySelector(".secret").style.display = "block"
