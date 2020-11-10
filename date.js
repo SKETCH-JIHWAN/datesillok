@@ -31,11 +31,11 @@ document.getElementById("current").innerHTML = days;
 // alert("비밀번호를 입력해주세요");
 var pw = prompt("당신은 누구신가요?", "");
 if (pw == "012486") {
-	alert("윤진아 나도 사랑해😍");
+	alert("윤진아 나도 사랑해😍 난 너밖에 없어! 오늘도 화이팅해!!");
 	document.querySelector(".secret").style.display = "block"
 	// $(".secret").css("display", "block");
 } else {
-	alert("윤진이가 아니네요. 우리들의 데이트실록 많이 봐주세요");
+	alert(pw + "님 안녕하세요. 우리들의 데이트실록 많이 봐주세요");
 	// $(".secret").css("display", "none");
 	document.querySelector(".secret").style.display = "none"
 }
