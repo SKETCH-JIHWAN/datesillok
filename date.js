@@ -39,3 +39,47 @@ if (pw == "012486") {
 	// $(".secret").css("display", "none");
 	document.querySelector(".secret").style.display = "none"
 }
+
+
+//개인카운터
+/*
+expireDate = new Date 
+expireDate.setMonth(expireDate.getMonth()+6) 
+hitCt = eval(cookieVal("pageHit")) 
+hitCt++ 
+document.cookie = "pageHit="+hitCt+";expires=" + expireDate.toGMTString() 
+
+function cookieVal(cookieName) { 
+thisCookie = document.cookie.split("; ") 
+for (i=0; i<thisCookie.length; i++) { 
+if (cookieName == thisCookie[i].split("=")[0]) { 
+return thisCookie[i].split("=")[1] 
+} 
+} 
+return 0 
+} 
+document.write("제 홈페이지에 <font color=red>" + hitCt + "</font> 번째 방문자이시네요.") 
+*/
+
+
+//총 카운터
+/*
+const countEl = document.getElementById('count');
+
+updateVisitCount();
+
+function updateVisitCount() {
+  fetch('https://api.countapi.xyz/update/sketchwan.github.io/portfolio/danimal/?amount=1')
+  .then(res => res.json())
+  .then(res => {
+    countEl.innerHTML = res.value;
+  });
+}
+*/
+const countEl = document.getElementById("visits");
+updateVisitCount();
+function updateVisitCount() {
+	fetch("https://api.countapi.xyz/update/datesillok/homepage/?amount=1").then(res => res.json()).then(res => {
+		countEl.innerHTML = res.value;
+	});
+}
