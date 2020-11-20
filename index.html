@@ -47,13 +47,31 @@
 						그냥 다 모르겠다. 죄다 부정하고 싶고 싫었다. 세상은 역시 내 생각대로 안되고 원하는데로 흘러가지 않는다.
 					</p>
 				</div>
+
+				<div class="sillok-items secret" style="display:none;">
+					<h2 class="days">
+						<span class="dates">2020.11.18</span>
+						<span class="tit">윤진이의 편지</span>
+					</h2>
+					<p class="contents">
+						<div>
+							<img src="img/loveletter_20201118.jpeg" alt="">
+						</div>
+						윤진이의 행동만으로도 난 이미 많은 사랑을 받고 있다는 것을 알고 있지만, <br>
+						이런 편지를 받을 때면 내가 감성 깊게 사랑을 받고 있다고 느껴진다. <br>
+						그래서 다시금 윤진이에게 고마움과 사랑스러움을 느낀다. <br>
+						(아마 윤진인 이 글을 보면서도 갑작스레 나로 인해 화가 나 있을수도 있다.) <br>
+						그래도 난 윤진이가 좋다~ 서로의 단점은 보완하고 장점은 부각시키는 연애를 이어나갔으면 좋겠다.
+					</p>
+				</div>
 			</div>
 		</div>
 		<div id="counter">
 			<p>다녀간 사람들</p>
 			<p id="visits">0</p>
 		</div>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<button type="button" id="topBtn" onclick="goTop();">맨 위로 ↑</button>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="date.js"></script>
 	<script>
 		$(".years li").click(function(){
@@ -67,6 +85,11 @@
 				$(".sillok-list.y-2021").css("display", "block");
 			}
 		});
+		function goTop(){
+			$("html").animate({
+				scrollTop : 0
+			}, 1000)
+		}
 	</script>
 </body>
 </html>
