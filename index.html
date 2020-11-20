@@ -72,7 +72,7 @@
 		</div>
 		<button type="button" id="topBtn" onclick="goTop();">맨 위로 ↑</button>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="date.js"></script>
+	<!-- <script src="date.js"></script> -->
 	<script>
 		$(".years li").click(function(){
 			$(".years li").removeClass("active");
@@ -89,6 +89,35 @@
 			$("html").animate({
 				scrollTop : 0
 			}, 1000)
+		}
+
+		var today = new Date();
+		var meetday = new Date("2020-02-29");
+		var days = Math.ceil((today-meetday)/24/60/60/1000);
+		// days = days - 1;
+		document.getElementById("current").innerHTML = days;
+
+		// alert("비밀번호를 입력해주세요");
+		var pw = prompt("당신은 누구신가요?", "");
+		if (pw == "012486") {
+			alert("윤진아 나도 사랑해😍 난 너밖에 없어! 오늘도 화이팅해!!");
+			$(".sillok-items.secret").css({
+				"display" : "block"
+			})
+			// $(".secret").css("display", "block");
+		} else {
+			alert(pw + "님 안녕하세요. 우리들의 데이트실록 많이 봐주세요");
+			// $(".secret").css("display", "none");
+			$(".sillok-items.secret").css({
+				"display" : "none"
+			})
+		}
+		const countEl = document.getElementById("visits");
+		updateVisitCount();
+		function updateVisitCount() {
+			fetch("https://api.countapi.xyz/update/datesillok/homepage/?amount=1").then(res => res.json()).then(res => {
+				countEl.innerHTML = res.value;
+			});
 		}
 	</script>
 </body>

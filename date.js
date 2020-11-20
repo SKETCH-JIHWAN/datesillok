@@ -22,28 +22,6 @@ function calcDate(days) {
 }
 */
 
-var today = new Date();
-var meetday = new Date("2020-02-29");
-var days = Math.ceil((today-meetday)/24/60/60/1000);
-// days = days - 1;
-document.getElementById("current").innerHTML = days;
-
-// alert("비밀번호를 입력해주세요");
-var pw = prompt("당신은 누구신가요?", "");
-if (pw == "012486") {
-	alert("윤진아 나도 사랑해😍 난 너밖에 없어! 오늘도 화이팅해!!");
-	$(".sillok-items.secret").css({
-		"display" : "block"
-	})
-	// $(".secret").css("display", "block");
-} else {
-	alert(pw + "님 안녕하세요. 우리들의 데이트실록 많이 봐주세요");
-	// $(".secret").css("display", "none");
-	$(".sillok-items.secret").css({
-		"display" : "none"
-	})
-}
-
 
 //개인카운터
 /*
@@ -80,10 +58,3 @@ function updateVisitCount() {
   });
 }
 */
-const countEl = document.getElementById("visits");
-updateVisitCount();
-function updateVisitCount() {
-	fetch("https://api.countapi.xyz/update/datesillok/homepage/?amount=1").then(res => res.json()).then(res => {
-		countEl.innerHTML = res.value;
-	});
-}
