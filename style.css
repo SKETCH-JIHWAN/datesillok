@@ -102,9 +102,9 @@ html, body {
 .container .sillok-items .days > span {float:left; margin-right:10px}
 .container .sillok-items .days .dates {font-size:22px; color:#818181}
 .container .sillok-items .days .tit {font-size:22px; line-height:24px; font-weight:600}
-#counter {position: fixed;right:30px; bottom:5%; text-align:center; font-size:12px}
+#counter {position: fixed;right:30px; top:75px; text-align:center; font-size:12px}
 #counter #visits {font-size:30px; font-weight:600; padding:5px 0}
-#topBtn {position: fixed; right:30px; top:5%; text-align: center; font-size:14px; border:none; background:transparent; cursor: pointer;}
+#topBtn {position: fixed; right:30px; top:50px; text-align: center; font-size:14px; border:none; background:#222; cursor: pointer; color:#fff;}
 .img-list {margin-bottom:15px; width:100%; display:inline-block}
 .img-list li {float:left; width:23.5%; margin-left:2%; cursor: pointer; margin-bottom:10px;}
 .img-list li::after {content:""; display:block; clear:both}
@@ -127,8 +127,11 @@ html, body {
 	.layer img {height:60vh;}
 }
 @media screen and (max-width:720px) {
+	.container {width:85%}
+	.img-list li img {height:140px;}
 	.layer img {height:auto; width:80vw;}
-
-.container .sillok-items .days .dates,
-.container .sillok-items .days .tit {font-size:18px; line-height:22px; font-weight:600}
+	.container .sillok-items .days .dates,
+	.container .sillok-items .days .tit {font-size:18px; line-height:22px; font-weight:600}
+	#counter {top:50px}
+	#topBtn {top:30px;}
 }

@@ -192,7 +192,6 @@
 		}
 		$(".img-list img").click(function(){
 			var imgName = $(this).attr("src");
-			console.log(imgName);
 			$(".layer").css("display", "block");
 			$(".layer img").attr("src", "");
 			$(".layer img").attr("src", imgName);
@@ -200,6 +199,16 @@
 		$(".layer button").click(function(){
 			$(".layer").css("display", "none");
 		});
+		$(window).scroll(function(){
+			var sct = $(this).scrollTop();
+			console.log(sct);
+			if(sct > 300) {
+				$("#counter").css("display", "none");
+			} else {
+				$("#counter").css("display", "block");
+			}
+		});
+		
 	</script>
 </body>
 </html>
