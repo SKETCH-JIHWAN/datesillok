@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<link href="img/favicon-2.ico" rel="shortcut icon" type="image/x-icon">
 	<title>Date Sillok</title>
@@ -29,7 +30,7 @@
 					</h2>
 					<div class="contents">
 						<ul class="img-list">
-							<li><a href="img/starbucks.JPG" download target="_blank">커피쿠폰</a></li>
+							<li><a href="img/starbucks.JPG" download target="_blank">커피쿠폰<i class="fas fa-coffee"></i></a></li>
 						</ul>
 						<div class="text">
 							커피 사먹어 난 하나 더 있어~
@@ -155,8 +156,12 @@
 
 		<!-- img layer -->
 		<div class="layer" style="display:none">
-			<button>닫기</button>
+			<button class="close">닫기</button>
 			<img src="" alt="">
+			<div class="btn-group">
+				<button class="prev">&lt;</button>
+				<button class="next">&gt;</button>
+			</div>
 		</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<!-- <script src="date.js"></script> -->
@@ -207,17 +212,43 @@
 			});
 		}
 		$(".img-list img").click(function(){
-			var imgName = $(this).attr("src");
+			imgName = $(this).attr("src");
+			imgCount = $(this).parents("ul").find("li").length;
+			imgNumber = imgName.split("/");
+			imgNm = imgNumber[2].split(".");
+			imgCurrent = imgNm[0];
+			if(imgCount <= 1) {
+				$(".layer .btn-group").css("display", "none");
+			} else {
+				$(".layer .btn-group").css("display", "block");
+			}
 			$(".layer").css("display", "block");
 			$(".layer img").attr("src", "");
 			$(".layer img").attr("src", imgName);
 		});
-		$(".layer button").click(function(){
+		$(".layer .close").click(function(){
 			$(".layer").css("display", "none");
+		});
+		$(".layer .next").click(function(){
+			if(imgCurrent == imgCount){
+				return false;
+			} else {
+				imgCurrent++;
+				$(".layer img").attr("src", "");
+				$(".layer img").attr("src", imgNumber[0] + "/" + imgNumber[1] + "/" + imgCurrent + "." + imgNm[1]);
+			} 
+		});
+		$(".layer .prev").click(function(){
+			if(imgCurrent <= 1){
+				return false;
+			} else {
+				imgCurrent--;
+				$(".layer img").attr("src", "");
+				$(".layer img").attr("src", imgNumber[0] + "/" + imgNumber[1] + "/" + imgCurrent + "." + imgNm[1]);
+			}
 		});
 		$(window).scroll(function(){
 			var sct = $(this).scrollTop();
-			console.log(sct);
 			if(sct > 300) {
 				$("#counter").css("display", "none");
 			} else {
