@@ -4,7 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -96,6 +96,7 @@ html, body {
 .container .years li:first-child {margin-left:0}
 .container .years li:hover {background:#222; color:#fff}
 .container .sillok-list {padding:30px 0}
+.container .sillok-list.y-2020 {display:none}
 .container .sillok-list .sillok-items {margin-bottom:40px;}
 .container .sillok-items .days {margin-bottom:10px}
 .container .sillok-items .days::after {content:""; display:block; clear: both;}
