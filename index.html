@@ -28,6 +28,36 @@
 				<div class="sillok-items secret" style="display:none">
 					<h2 class="days">
 						<span class="dates">2021.1.13</span>
+						<span class="tit">새해 네번째 편지(홈페이지 한정)</span>
+					</h2>
+					<div class="contents">
+						<ul class="img-list">
+							<li>
+							</li>
+						</ul>
+						<div class="text">
+							오늘은 이미지 대신 홈페이지 텍스트로 대신하려구 해~ <br>
+							같이 있어도 보고 싶고 떨어지면 더 보고 싶은 윤진아~ <br>
+							내가 취준한다는 이유로 혹시나 힘든 일이 있고 하고 싶은 말이 있지만 <br>
+							참고 있거나 안하는 말이 있는 건 아니지?? <br>
+							만약 있다면 말해줘! 윤진이가 강한 여성이라는 건 알고 있어! 그렇지만 <br>
+							정말 힘든 일이 있거나 하고픈 말을 해야할 때 하는 여성이야말로 강하고 멋진 여성이라고 생각해 <br>
+							무작정 강한 척하고 남들과의 경쟁에서 이기려는 모습은 오히려 약한 모습을 감추려는 안타까운 모습으로 보일 뿐이야 <br>
+							그러니까 윤진이는 더 멋진 여성으로 거듭나길 바래 (난 너무 남성적인 면을 버리고 감성적이란 점이 그렇지만) <br>
+							무튼 금요일이 되면 다이슨으로 청소기도 돌리고 회도 먹고 매운탕에 밥도 먹고 밤새 놀면서 해외주식도 해보고 <br>
+							루미큐브도 하고 승리호도 보고 해야할거 천지니까 목요일 저녁엔 일찍 자고 금요일 오전엔 커피를 섭취하도록 해 <br>
+							나 또한 그러도록 노력할테니까ㅋㅋㅋㅋㅋ <br>
+							그리고 내가 너무 윤진이를 보고 싶어하는 티를 안 내서 윤진이가 섭해하는 마음을 가지고 있진 않나 싶은데 <br>
+							난 항상 윤진이 옆에 있고 싶으니까 걱정말아! <br>
+							그럼 난 곧 있을 윤진이 퇴근 시간에 맞춰서 준비를 해야해서 이만~ <br>
+							사랑해 내사랑~~~~ <br>
+							-윤진와 통화 후 햄버거 사러 나갈 남친-
+						</div>
+					</div>
+				</div>	
+				<div class="sillok-items secret" style="display:none">
+					<h2 class="days">
+						<span class="dates">2021.1.13</span>
 						<span class="tit">새해 세번째 편지</span>
 					</h2>
 					<div class="contents">
@@ -256,15 +286,15 @@
 		}
 
 		var today = new Date();
-		var meetday = new Date("2020-02-29");
+		var meetday = new Date("2020-02-29T00:00:00+09:00");
+		//00시 start
 		var days = Math.ceil((today-meetday)/24/60/60/1000);
-		// days = days - 1;
+		// days = days + 1;
 		document.getElementById("current").innerHTML = days;
-
 		// alert("비밀번호를 입력해주세요");
 		var pw = prompt("당신은 누구신가요?", "");
 		if (pw == "012486") {
-			alert("언제나 사랑해 윤진아!!!!!알라뷰");
+			alert("금요일에 봐~ 내사랑!!!");
 			$(".sillok-items.secret").css({
 				"display" : "block"
 			})
